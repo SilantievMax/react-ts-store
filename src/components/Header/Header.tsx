@@ -17,6 +17,7 @@ const Header: FC<HeaderProps> = () => {
 			<Layout>
 				<BottomHeader />
 			</Layout>
+			<div className={styles.line}></div>
 		</header>
 	)
 }
