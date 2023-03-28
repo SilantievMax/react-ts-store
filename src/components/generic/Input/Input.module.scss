@@ -1,0 +1,38 @@
+@import 'vars';
+
+.input {
+	border-radius: 36px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 10px;
+	max-width: 282px;
+
+	&_white {
+		background: #fff;
+	}
+
+	&_gray {
+		background: #ededed;
+	}
+
+	img {
+		background-color: #ffc85e;
+		padding: 12px;
+		width: 39px;
+		height: 39px;
+		border-radius: 50%;
+	}
+
+	input {
+		background: transparent;
+	}
+
+	&::placeholder {
+		font-family: $font400;
+		font-size: 12px;
+		line-height: 150%;
+		color: #5c6370;
+		opacity: 0.6;
+	}
+}
