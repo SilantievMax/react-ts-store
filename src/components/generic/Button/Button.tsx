@@ -9,7 +9,7 @@ interface ButtonProps {
 const Button: FC<ButtonProps> = ({ text, svg }) => {
 	return (
 		<>
-			<button className={styles.btn}>
+			<button className={`${styles.btn} ${!text && styles.unbtn}`}>
 				{text} {svg && <img src={svg} alt='svg' />}
 			</button>
 		</>

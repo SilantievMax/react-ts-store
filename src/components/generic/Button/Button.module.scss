@@ -1,7 +1,7 @@
 @import 'vars';
 
 .btn {
-    cursor: pointer;
+	cursor: pointer;
 	background-color: #ffc85e;
 	padding: 24px 54px;
 	border-radius: 79px;
@@ -15,5 +15,13 @@
 
 	img {
 		margin-left: 12px;
+	}
+}
+
+.unbtn {
+	padding: 24px 24px;
+
+	img {
+		margin-left: 0px;
 	}
 }
