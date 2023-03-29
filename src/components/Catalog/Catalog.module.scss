@@ -1,0 +1,11 @@
+.sorting {
+	padding-top: 50px;
+	padding-bottom: 50px;
+}
+
+.section {
+	display: grid;
+	grid-template-columns: 18% 1fr;
+	gap: 108px;
+	margin-top: 50px;
+}

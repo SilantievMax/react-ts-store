@@ -1,0 +1,48 @@
+@import 'vars';
+
+.continer {
+	margin-bottom: 30px;
+}
+
+.heading {
+	font-family: $font500;
+	font-size: 16px;
+	line-height: 150%;
+	color: #111111;
+}
+
+.text {
+	font-family: $font300;
+	font-size: 14px;
+	line-height: 150%;
+	color: #3f4e65;
+	margin-top: 10px;
+
+	span {
+		font-family: $font500;
+		color: #111111;
+	}
+}
+
+.inputs {
+	display: flex;
+	justify-content: space-between;
+	margin-top: 16px;
+}
+
+.input {
+	width: 100px;
+	height: 23px;
+	background: linear-gradient(
+		90deg,
+		rgba(255, 198, 80, 0.3) 0%,
+		rgba(254, 202, 110, 0.3) 97.25%
+	);
+	border-radius: 1000px;
+
+	font-family: $font300;
+	font-size: 12px;
+	line-height: 15px;
+	text-align: center;
+	color: #3f4e65;
+}

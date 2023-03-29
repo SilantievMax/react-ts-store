@@ -1,0 +1,33 @@
+@import 'vars';
+
+.continer {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.heading {
+	font-family: $font500;
+	font-size: 40px;
+	line-height: 120%;
+	text-transform: uppercase;
+	color: #111111;
+}
+
+.sort {
+	font-family: $font500;
+	font-size: 16px;
+	line-height: 150%;
+	color: #111111;
+}
+
+.select {
+	border: none;
+	outline: none;
+    margin-left: 5px;
+
+	font-family: $font400;
+	font-size: 16px;
+	line-height: 150%;
+	color: #3f4e65;
+}
