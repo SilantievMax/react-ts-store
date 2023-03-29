@@ -1,49 +1,49 @@
 @import 'vars';
 
 .card {
-	display: flex;
-	align-items: center;
-	text-align: right;
+  display: flex;
+  align-items: center;
+  text-align: right;
 
-	&_operator {
-		display: flex;
-		flex-direction: column;
-	}
+  &_operator {
+    display: flex;
+    flex-direction: column;
+  }
 
-	&_tel {
-		font-family: $font600;
-		font-size: 14px;
-		line-height: 150%;
-		color: #111111;
-	}
+  &_tel {
+    font-family: $font600;
+    font-size: 14px;
+    line-height: 150%;
+    color: #111111;
+  }
 
-	&_time {
-		font-family: $font300;
-		font-size: 12px;
-		line-height: 150%;
-		color: #3f4e65;
+  &_time {
+    font-family: $font300;
+    font-size: 12px;
+    line-height: 150%;
+    color: #3f4e65;
 
-		margin-top: 5px;
-	}
+    margin-top: 5px;
+  }
 
-	&_link {
-		font-family: $font400;
-		font-size: 10px;
-		line-height: 150%;
-		text-decoration-line: underline;
-		color: #3f4e65;
-		margin-top: 5px;
-	}
+  &_link {
+    font-family: $font400;
+    font-size: 10px;
+    line-height: 150%;
+    text-decoration-line: underline;
+    color: #3f4e65;
+    margin-top: 5px;
+  }
 
-	&_img {
-		width: 70px;
-		border-bottom-left-radius: 50%;
-		border-bottom-right-radius: 50%;
-		margin-left: 14px;
-	}
+  &_img {
+    width: 70px;
+    border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+    margin-left: 14px;
+  }
 
-    &_f {
-        color: #fff;
-        text-align: left;
-    }
+  &_f {
+    color: #fff;
+    text-align: left;
+  }
 }

@@ -1,23 +1,23 @@
 @import 'vars';
 
 .type_care {
-	margin-top: 25px;
-	margin-bottom: 25px;
-	display: flex;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  display: flex;
 }
 
 .inAside {
-	display: flex;
-	flex-direction: column;
-	border-bottom: 1px dashed #11111123;
-	padding-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px dashed #11111123;
+  padding-bottom: 20px;
 }
 
 .heading {
-	font-family: $font500;
-	font-size: 16px;
-	line-height: 150%;
-	text-transform: uppercase;
-	color: #111111;
-	margin-bottom: 15px;
+  font-family: $font500;
+  font-size: 16px;
+  line-height: 150%;
+  text-transform: uppercase;
+  color: #111111;
+  margin-bottom: 15px;
 }

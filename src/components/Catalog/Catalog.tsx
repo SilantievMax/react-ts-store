@@ -1,22 +1,25 @@
 import React, { FC } from 'react'
-import styles from './Catalog.module.scss'
-import Sorting from 'components/Catalog/components/Sorting/Sorting'
-import TypeCare from 'components/Catalog/components/ListTypeCare/TypeCare/TypeCare'
+
 import AsideParameters from 'components/Catalog/AsideParameters/AsideParameters'
-import ListTypeCare from './components/ListTypeCare/ListTypeCare'
+import Cards from 'components/Catalog/Cards/Cards'
+import ListTypeCare from 'components/Catalog/components/ListTypeCare/ListTypeCare'
+import TypeCare from 'components/Catalog/components/ListTypeCare/TypeCare/TypeCare'
+import Sorting from 'components/Catalog/components/Sorting/Sorting'
+
+import styles from './Catalog.module.scss'
 
 const Catalog: FC = () => {
-	return (
-		<div className={styles.sorting}>
-			<Sorting heading='Косметика и гигиена' />
-			<ListTypeCare />
-			<div className={styles.section}>
-				<AsideParameters />
-				<section> section</section>
-			</div>
-			<div style={{ textAlign: 'center' }}>Кнопки постраничного перехода</div>
-		</div>
-	)
+  return (
+    <div className={styles.sorting}>
+      <Sorting heading='Косметика и гигиена' />
+      <ListTypeCare />
+      <div className={styles.section}>
+        <AsideParameters />
+        <Cards />
+      </div>
+      <div style={{ textAlign: 'center' }}>Кнопки постраничного перехода</div>
+    </div>
+  )
 }
 
 export default Catalog

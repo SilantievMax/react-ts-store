@@ -1,55 +1,55 @@
 @import 'vars';
 
 .wrapper {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	padding-top: 14px;
-	padding-bottom: 13px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 14px;
+  padding-bottom: 13px;
 }
 
 .left_block {
-	display: flex;
+  display: flex;
 }
 
 .contact {
-	position: relative;
-	display: flex;
-	flex-direction: column;
-	padding-left: 35px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding-left: 35px;
 
-	font-family: $font600;
-	font-size: 14px;
-	line-height: 18px;
-	color: #111111;
+  font-family: $font600;
+  font-size: 14px;
+  line-height: 18px;
+  color: #111111;
 
-	&:last-child {
-		margin-left: 40px;
-	}
+  &:last-child {
+    margin-left: 40px;
+  }
 
-	&:after {
-		content: '';
-		position: absolute;
-		left: 0;
-		top: calc(50% - 10px);
-		width: 20px;
-		height: 20px;
-	}
+  &:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: calc(50% - 10px);
+    width: 20px;
+    height: 20px;
+  }
 
-	&:first-child:after {
-		content: '';
-		background-image: url('../../../../assets/svg/point-map.svg');
-	}
+  &:first-child:after {
+    content: '';
+    background-image: url('../../../../assets/svg/point-map.svg');
+  }
 
-	&:last-child:after {
-		content: '';
-		background-image: url('../../../../assets/svg/email.svg');
-	}
+  &:last-child:after {
+    content: '';
+    background-image: url('../../../../assets/svg/email.svg');
+  }
 
-	span {
-		font-family: $font300;
-		font-size: 12px;
-		line-height: 130.02%;
-		color: #3f4e65;
-	}
+  span {
+    font-family: $font300;
+    font-size: 12px;
+    line-height: 130.02%;
+    color: #3f4e65;
+  }
 }

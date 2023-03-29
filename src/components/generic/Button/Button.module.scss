@@ -1,27 +1,27 @@
 @import 'vars';
 
 .btn {
-	cursor: pointer;
-	background-color: #ffc85e;
-	padding: 24px 54px;
-	border-radius: 79px;
-	display: flex;
-	align-items: center;
+  cursor: pointer;
+  background-color: #ffc85e;
+  padding: 24px 54px;
+  border-radius: 79px;
+  display: flex;
+  align-items: center;
 
-	font-family: $font700;
-	font-size: 14px;
-	line-height: 17px;
-	color: #ffffff;
+  font-family: $font700;
+  font-size: 14px;
+  line-height: 17px;
+  color: #ffffff;
 
-	img {
-		margin-left: 12px;
-	}
+  img {
+    margin-left: 12px;
+  }
 }
 
 .unbtn {
-	padding: 24px 24px;
+  padding: 24px 24px;
 
-	img {
-		margin-left: 0px;
-	}
+  img {
+    margin-left: 0px;
+  }
 }
