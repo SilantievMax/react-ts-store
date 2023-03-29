@@ -3,18 +3,19 @@
 .btn {
   cursor: pointer;
   background-color: #ffc85e;
-  padding: 20px 54px;
+  padding: 10px 19px;
   border-radius: 79px;
   display: flex;
   align-items: center;
 
   font-family: $font700;
-  font-size: 14px;
-  line-height: 17px;
+  font-size: 10px;
+  line-height: 12px;
+  letter-spacing: 0.15em;
   color: #ffffff;
 
   img {
-    margin-left: 12px;
+    margin-left: 5px;
   }
 }
 
