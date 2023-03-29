@@ -18,6 +18,10 @@
   text-align: center;
   color: #3f4e65;
 
+  &:first-letter {
+    text-transform: capitalize;
+  }
+
   &:not(:last-child) {
     margin-right: 10px;
   }
