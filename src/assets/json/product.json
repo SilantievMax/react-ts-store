@@ -1,0 +1,66 @@
+[
+  {
+    "id": 1,
+    "title": "средство для мытья посуды Crystal",
+    "url_img": "https://avatars.mds.yandex.net/i?id=fc91b51ceca34dcfc4ec32a8b85a708d28cb81c3-9229722-images-thumbs&n=13",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam interdum ut justo, vestibulum sagittis iaculis iaculis. Quis mattis vulputate feugiat massa vestibulum duis. Faucibus consectetur aliquet sed pellentesque consequat consectetur congue mauris venenatis. Nunc elit, dignissim sed nulla ullamcorper enim, malesuada.",
+    "barcode": "4604049097548",
+    "price": 48.76,
+    "specifications": {
+      "brand": "AOS",
+      "weight": "450 мл",
+      "manufacturer": "AOS",
+      "size": "",
+      "type": ["средства для посуды"]
+    }
+  },
+  {
+    "id": 2,
+    "title": "Автмат Гель СМС жидкое в растворимых капсулах Liquid Capsules Горный родник",
+    "url_img": "https://www.cmp24.ru/images/prodacts/sourse/61583/61583684_gel-ariel-avtomat-jidkiy-v-rastvorimyih-kapsulah-liquid-capsules-color-15288-g-81578061.jpg",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam interdum ut justo, vestibulum sagittis iaculis iaculis. Quis mattis vulputate feugiat massa vestibulum duis. Faucibus consectetur aliquet sed pellentesque consequat consectetur congue mauris venenatis. Nunc elit, dignissim sed nulla ullamcorper enim, malesuada.",
+    "barcode": "4604049097549",
+    "price": 42.23,
+    "specifications": {
+      "brand": "ARIEL",
+      "weight": "15X28.8 г",
+      "manufacturer": "ARIEL",
+      "size": "",
+      "type": ["средства для посуды"]
+    }
+  },
+  {
+    "id": 3,
+    "title": "Порошок стиральный Автомат 100 пятен COMPACT",
+    "url_img": "https://alania-market.ru/image/cache/catalog/stirka-i-uhod-za-belyem/stiralnye-poroshki/5/16328296-1-640x640.jpg",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam interdum ut justo, vestibulum sagittis iaculis iaculis. Quis mattis vulputate feugiat massa vestibulum duis. Faucibus consectetur aliquet sed pellentesque consequat consectetur congue mauris venenatis. Nunc elit, dignissim sed nulla ullamcorper enim, malesuada.",
+    "barcode": "4604049097345",
+    "price": 53.99,
+    "specifications": {
+      "brand": "BIMAX",
+      "weight": "1500 г",
+      "manufacturer": "BIMAX",
+      "size": "",
+      "type": ["средства для стирки", "гигиеническая продукция"]
+    }
+  },
+  {
+    "id": 4,
+    "title": "2 в 1 Шампунь и бальзам-ополаскиватель Основной Уход",
+    "url_img": "https://nonfood.gc-sm.com/wp-content/uploads/2019/07/6f58f38108320aa86bc045177ccc3eb0.jpeg",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam interdum ut justo, vestibulum sagittis iaculis iaculis. Quis mattis vulputate feugiat massa vestibulum duis. Faucibus consectetur aliquet sed pellentesque consequat consectetur congue mauris venenatis. Nunc elit, dignissim sed nulla ullamcorper enim, malesuada.",
+    "barcode": "4604049034256",
+    "price": 279.0,
+    "specifications": {
+      "brand": "Head & Shoulders",
+      "weight": "200 мл",
+      "manufacturer": "Head & Shoulders",
+      "size": "",
+      "type": [
+        "уход за волосами",
+        "подарочные наборы",
+        "гигиеническая продукция"
+      ]
+    }
+  }
+]
