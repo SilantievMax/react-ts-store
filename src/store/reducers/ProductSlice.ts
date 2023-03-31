@@ -7,14 +7,14 @@ interface ProductState {
   products: IProduc[]
   isLoading: boolean
   error: string
-  filterProducts: IProduc[]
+  copyProducts: IProduc[]
 }
 
 const initialState: ProductState = {
   products: [],
   isLoading: true,
   error: '',
-  filterProducts: []
+  copyProducts: []
 }
 
 export const productSlice = createSlice({
@@ -38,11 +38,11 @@ export const productSlice = createSlice({
     },
     sortingType: (state, action: PayloadAction<string>) => {
       if (action.payload === 'Все') {
-        state.products = state.filterProducts
+        state.products = state.copyProducts
         return
       }
 
-      state.products = state.filterProducts.filter(e =>
+      state.products = state.copyProducts.filter(e =>
         e.specifications.type.find(e => e === action.payload)
       )
     }
@@ -55,7 +55,7 @@ export const productSlice = createSlice({
       state.isLoading = false
       state.error = ''
       state.products = action.payload
-      state.filterProducts = action.payload
+      state.copyProducts = action.payload
     },
     [fetchProducts.pending.type]: state => {
       state.products = []

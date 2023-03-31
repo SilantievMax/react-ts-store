@@ -6,7 +6,7 @@ interface SortingState {
 }
 
 const initialState: SortingState = {
-  typeProducts: ["Все"]
+  typeProducts: ['Все']
 }
 
 export const sortingSlice = createSlice({
@@ -21,7 +21,8 @@ export const sortingSlice = createSlice({
           }
         }
       })
-    }
+    },
+    grtPriceProduct(state, action: PayloadAction<IProduc[]>) {}
   }
 })
 
