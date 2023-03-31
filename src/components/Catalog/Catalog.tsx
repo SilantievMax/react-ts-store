@@ -15,7 +15,7 @@ const Catalog: FC = () => {
   const dispatch = useAppDispatch()
 
   useEffect(() => {
-    setTimeout(() => dispatch(fetchProducts()), 0)
+    dispatch(fetchProducts())
   }, [])
 
   const { products, isLoading } = useAppSelector(state => state.productReduxer)

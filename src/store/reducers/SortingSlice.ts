@@ -6,7 +6,7 @@ interface SortingState {
 }
 
 const initialState: SortingState = {
-  typeProducts: []
+  typeProducts: ["Все"]
 }
 
 export const sortingSlice = createSlice({

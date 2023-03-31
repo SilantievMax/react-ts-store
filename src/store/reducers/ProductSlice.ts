@@ -1,4 +1,4 @@
-import { PayloadAction, createAsyncThunk, createSlice } from '@reduxjs/toolkit'
+import { PayloadAction, createSlice } from '@reduxjs/toolkit'
 import { IProduc } from 'types/types'
 
 import { fetchProducts } from 'utils/jsonGetProducts'
@@ -7,12 +7,14 @@ interface ProductState {
   products: IProduc[]
   isLoading: boolean
   error: string
+  filterProducts: IProduc[]
 }
 
 const initialState: ProductState = {
   products: [],
   isLoading: true,
-  error: ''
+  error: '',
+  filterProducts: []
 }
 
 export const productSlice = createSlice({
@@ -20,8 +22,6 @@ export const productSlice = createSlice({
   initialState,
   reducers: {
     sortingPrice: (state, action: PayloadAction<string>) => {
-      console.log(action.payload)
-
       if (action.payload === '1-0') {
         state.products = state.products.sort((a, b) => b.price - a.price)
       } else if (action.payload === '0-1') {
@@ -35,6 +35,16 @@ export const productSlice = createSlice({
           b.title.localeCompare(a.title)
         )
       }
+    },
+    sortingType: (state, action: PayloadAction<string>) => {
+      if (action.payload === 'Все') {
+        state.products = state.filterProducts
+        return
+      }
+
+      state.products = state.filterProducts.filter(e =>
+        e.specifications.type.find(e => e === action.payload)
+      )
     }
   },
   extraReducers: {
@@ -45,6 +55,7 @@ export const productSlice = createSlice({
       state.isLoading = false
       state.error = ''
       state.products = action.payload
+      state.filterProducts = action.payload
     },
     [fetchProducts.pending.type]: state => {
       state.products = []
@@ -58,4 +69,4 @@ export const productSlice = createSlice({
 })
 
 export default productSlice.reducer
-export const { sortingPrice } = productSlice.actions
+export const { sortingPrice, sortingType } = productSlice.actions
