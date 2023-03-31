@@ -3,7 +3,8 @@
 .label {
   position: relative;
   display: inline-block;
-  width: 100px;
+  min-width: 100px;
+  max-width: 130px;
   height: 70px;
   display: block;
   background: #ffffff;
@@ -44,6 +45,7 @@
   padding: 0;
   margin-right: 0px;
   text-align: left;
+  max-width: 200px;
   margin-bottom: 10px;
 
   &:last-child {

@@ -20,7 +20,7 @@ const AsideParameters: FC = () => {
         <Button text='' svg={deleteSvg} />
       </div>
       <div>
-        <ListTypeCare heading='Уход за телом...' />
+        <ListTypeCare heading=' ' />
       </div>
     </aside>
   )

@@ -1,4 +1,7 @@
-import React, { FC } from 'react'
+import { useAppDispatch, useAppSelector } from 'hooks/redux'
+import React, { FC, useEffect } from 'react'
+
+import { getTypeProduct } from 'store/reducers/SortingSlice'
 
 import styles from './ListTypeCare.module.scss'
 import TypeCare from './TypeCare/TypeCare'
@@ -9,16 +12,22 @@ interface ListTypeCareProps {
 
 const ListTypeCare: FC<ListTypeCareProps> = ({ heading }) => {
   const isAsideBloc = heading ? true : false
+  const dispatch = useAppDispatch()
+  const { products } = useAppSelector(state => state.productReduxer)
+  const { typeProducts } = useAppSelector(state => state.sortingReduxer)
+
+  useEffect(() => {
+    dispatch(getTypeProduct(products))
+  }, [])
+
   return (
     <div className={`${styles.type_care} ${heading && styles.inAside}`}>
       <h4 className={styles.heading}>{heading}</h4>
 
-      <TypeCare isAsideBloc={isAsideBloc} text='Уход за телом' />
-      <TypeCare isAsideBloc={isAsideBloc} text='Уход за телом' />
-      <TypeCare isAsideBloc={isAsideBloc} text='Уход за телом' />
-      <TypeCare isAsideBloc={isAsideBloc} text='Уход за телом' />
-      <TypeCare isAsideBloc={isAsideBloc} text='Уход за телом' />
-      <TypeCare isAsideBloc={isAsideBloc} text='Уход за телом' />
+      {typeProducts &&
+        typeProducts.map((product, index) => (
+          <TypeCare key={index} isAsideBloc={isAsideBloc} text={product} />
+        ))}
     </div>
   )
 }

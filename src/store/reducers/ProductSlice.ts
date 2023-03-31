@@ -1,11 +1,7 @@
 import { PayloadAction, createAsyncThunk, createSlice } from '@reduxjs/toolkit'
 import { IProduc } from 'types/types'
 
-import products from 'assets/json/product.json'
-
-export const fetchProducts = createAsyncThunk('products/fetchProducts', () => {
-  return products
-})
+import { fetchProducts } from 'utils/jsonGetProducts'
 
 interface ProductState {
   products: IProduc[]
@@ -22,20 +18,7 @@ const initialState: ProductState = {
 export const productSlice = createSlice({
   name: 'product',
   initialState,
-  reducers: {
-    // productsFetching(state) {
-    //   state.isLoading = true
-    // },
-    // productsFetchingSuccess(state, action: PayloadAction<IProduc[]>) {
-    //   state.isLoading = false
-    //   state.error = ''
-    //   state.products = action.payload
-    // },
-    // productsFetchingError(state, action: PayloadAction<string>) {
-    //   state.isLoading = false
-    //   state.error = action.payload
-    // }
-  },
+  reducers: {},
   extraReducers: {
     [fetchProducts.fulfilled.type]: (
       state,
@@ -57,4 +40,3 @@ export const productSlice = createSlice({
 })
 
 export default productSlice.reducer
-// export const { productsFetching } = productSlice.actions
