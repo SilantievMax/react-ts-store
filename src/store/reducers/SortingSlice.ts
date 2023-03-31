@@ -16,7 +16,6 @@ export const sortingSlice = createSlice({
     getTypeProduct(state, action: PayloadAction<IProduc[]>) {
       action.payload.forEach(e => {
         for (let i = 0; i < e?.specifications.type.length; i++) {
-          console.log(e?.specifications.type.length)
           if (!state.typeProducts.includes(e?.specifications.type[i])) {
             state.typeProducts.push(e?.specifications.type[i])
           }

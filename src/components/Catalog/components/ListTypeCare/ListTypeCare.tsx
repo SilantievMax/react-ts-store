@@ -18,7 +18,7 @@ const ListTypeCare: FC<ListTypeCareProps> = ({ heading }) => {
 
   useEffect(() => {
     dispatch(getTypeProduct(products))
-  }, [])
+  }, [products])
 
   return (
     <div className={`${styles.type_care} ${heading && styles.inAside}`}>

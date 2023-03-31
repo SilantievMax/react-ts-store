@@ -1,4 +1,7 @@
+import { useAppDispatch } from 'hooks/redux'
 import React, { FC, useState } from 'react'
+
+import { sortingPrice } from 'store/reducers/ProductSlice'
 
 import styles from './Sorting.module.scss'
 
@@ -8,6 +11,13 @@ interface SortingProps {
 
 const Sorting: FC<SortingProps> = ({ heading }) => {
   const [selectValue, setSelectValue] = useState('a-z')
+  const dispatch = useAppDispatch()
+
+  const getValueSelect = (e: React.ChangeEvent<HTMLSelectElement>) => {
+    setSelectValue(e.target.value)
+  }
+  dispatch(sortingPrice(selectValue))
+
   return (
     <div className={styles.continer}>
       <h3 className={styles.heading}>{heading}</h3>
@@ -15,7 +25,7 @@ const Sorting: FC<SortingProps> = ({ heading }) => {
         <span className={styles.sort}>Сортировка:</span>
         <select
           value={selectValue}
-          onChange={e => setSelectValue(e.target.value)}
+          onChange={e => getValueSelect(e)}
           className={styles.select}
         >
           <option value='a-z'>По названию (а-я)</option>

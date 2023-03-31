@@ -18,7 +18,25 @@ const initialState: ProductState = {
 export const productSlice = createSlice({
   name: 'product',
   initialState,
-  reducers: {},
+  reducers: {
+    sortingPrice: (state, action: PayloadAction<string>) => {
+      console.log(action.payload)
+
+      if (action.payload === '1-0') {
+        state.products = state.products.sort((a, b) => b.price - a.price)
+      } else if (action.payload === '0-1') {
+        state.products = state.products.sort((a, b) => a.price - b.price)
+      } else if (action.payload === 'a-z') {
+        state.products = state.products.sort((a: any, b: any) =>
+          a.title.localeCompare(b.title)
+        )
+      } else if (action.payload === 'z-a') {
+        state.products = state.products.sort((a: any, b: any) =>
+          b.title.localeCompare(a.title)
+        )
+      }
+    }
+  },
   extraReducers: {
     [fetchProducts.fulfilled.type]: (
       state,
@@ -40,3 +58,4 @@ export const productSlice = createSlice({
 })
 
 export default productSlice.reducer
+export const { sortingPrice } = productSlice.actions
