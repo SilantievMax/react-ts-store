@@ -8,11 +8,12 @@
   max-width: 326px;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
 }
 
 .img {
   max-height: 194px;
-  max-width: 194px;
+  height: 100%;
   margin: 0 auto;
 }
 

@@ -1,4 +1,5 @@
 import React, { FC } from 'react'
+import { IProduc } from 'types/types'
 
 import ButtonCard from 'components/generic/ButtonCard/ButtonCard'
 
@@ -8,40 +9,47 @@ import ml from 'assets/svg/ml.svg'
 
 import styles from './Card.module.scss'
 
-const Card: FC = () => {
+interface CardProps {
+  product: IProduc
+}
+
+const Card: FC<CardProps> = ({ product }) => {
+  const weight = product.specifications.weight
+  const isWeight = weight[weight.length - 1] === 'л' ? ml : g
+
   return (
     <div className={styles.card}>
-      <img
-        className={styles.img}
-        src='https://avatars.mds.yandex.net/get-mpic/5288781/img_id4157364499445907505.jpeg/orig'
-        alt=''
-      />
+      <img className={styles.img} src={product.url_img} alt={product.title} />
       <div className={styles.block_weight}>
         <div
-          style={{ backgroundImage: `url(${ml && g})` }}
+          style={{
+            backgroundImage: `url(${isWeight})`
+          }}
           className={styles.weight_img}
         ></div>
-        <span className={styles.weight}>450 мл</span>
+        <span className={styles.weight}>{weight}</span>
       </div>
       <h4 className={styles.heading}>
-        <span>AOS</span> средство для мытья посуды Crystal
+        <span>{product.specifications.brand} </span>
+        {product.title}
       </h4>
       <ul className={styles.list}>
         <li className={styles.item}>
           Штрихкод:
-          <span>4604049097548</span>
+          <span>{product.barcode}</span>
         </li>
         <li className={styles.item}>
           Производитель:
-          <span>Нэфис</span>
+          <span>{product.specifications.manufacturer}</span>
         </li>
         <li className={styles.item}>
           Бренд:
-          <span>AOS</span>
+          <span>{product.specifications.brand}</span>
         </li>
       </ul>
       <div className={styles.card_price}>
-        <span>48,76 ₸</span> <ButtonCard text='В КОРЗИНУ' svg={basket} />
+        <span>{product.price} ₸</span>{' '}
+        <ButtonCard text='В КОРЗИНУ' svg={basket} />
       </div>
     </div>
   )
