@@ -3,10 +3,12 @@ import { IProduc } from 'types/types'
 
 interface SortingState {
   typeProducts: string[]
+  priceProduct: number[]
 }
 
 const initialState: SortingState = {
-  typeProducts: ['Все']
+  typeProducts: ['Все'],
+  priceProduct: []
 }
 
 export const sortingSlice = createSlice({
@@ -22,9 +24,13 @@ export const sortingSlice = createSlice({
         }
       })
     },
-    grtPriceProduct(state, action: PayloadAction<IProduc[]>) {}
+    grtPriceProduct(state, action: PayloadAction<IProduc[]>) {
+      const arryPrice: number[] = []
+      action.payload.forEach(e => arryPrice.push(e.price))
+      state.priceProduct = [Math.min(...arryPrice), Math.max(...arryPrice)]
+    }
   }
 })
 
 export default sortingSlice.reducer
-export const { getTypeProduct } = sortingSlice.actions
+export const { getTypeProduct, grtPriceProduct } = sortingSlice.actions

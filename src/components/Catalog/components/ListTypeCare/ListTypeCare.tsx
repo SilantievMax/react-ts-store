@@ -1,7 +1,5 @@
-import { useAppDispatch, useAppSelector } from 'hooks/redux'
-import React, { FC, useEffect } from 'react'
-
-import { getTypeProduct } from 'store/reducers/SortingSlice'
+import { useAppSelector } from 'hooks/redux'
+import React, { FC } from 'react'
 
 import styles from './ListTypeCare.module.scss'
 import TypeCare from './TypeCare/TypeCare'
@@ -12,13 +10,7 @@ interface ListTypeCareProps {
 
 const ListTypeCare: FC<ListTypeCareProps> = ({ heading }) => {
   const isAsideBloc = heading ? true : false
-  const dispatch = useAppDispatch()
-  const { products } = useAppSelector(state => state.productReduxer)
   const { typeProducts } = useAppSelector(state => state.sortingReduxer)
-
-  useEffect(() => {
-    dispatch(getTypeProduct(products))
-  }, [products])
 
   return (
     <div className={`${styles.type_care} ${heading && styles.inAside}`}>

@@ -9,6 +9,8 @@ import Loading from 'components/generic/Loading/Loading'
 
 import { fetchProducts } from 'utils/jsonGetProducts'
 
+import { getTypeProduct, grtPriceProduct } from 'store/reducers/SortingSlice'
+
 import styles from './Catalog.module.scss'
 
 const Catalog: FC = () => {
@@ -19,6 +21,11 @@ const Catalog: FC = () => {
   }, [])
 
   const { products, isLoading } = useAppSelector(state => state.productReduxer)
+
+  useEffect(() => {
+    dispatch(getTypeProduct(products))
+    dispatch(grtPriceProduct(products))
+  }, [products])
 
   return (
     <div className={styles.sorting}>
