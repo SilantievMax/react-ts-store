@@ -37,6 +37,7 @@ export const sortingSlice = createSlice({
       state.priceProduct = [Math.min(...arryPrice), Math.max(...arryPrice)]
     },
     getManufacturer(state, action: PayloadAction<IProduc[]>) {
+      state.manufacturerProduct = []
       action.payload.forEach(e => {
         if (!state.manufacturerProduct.some(a => a.name === e.specifications.manufacturer)) {
           state.manufacturerProduct.push({
@@ -46,7 +47,7 @@ export const sortingSlice = createSlice({
         }
       })
 
-      if (state.manufacturerProduct.length > 1) {
+      if (state.manufacturerProduct.length >= 1) {
         for (let i = 0; i < state.manufacturerProduct.length; i++) {
           for (let j = 0; j < action.payload.length; j++) {
             if (state.manufacturerProduct[i].name === action.payload[j].specifications.manufacturer) {

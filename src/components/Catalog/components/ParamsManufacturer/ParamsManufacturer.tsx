@@ -21,7 +21,7 @@ const ParamsManufacturer: FC = () => {
           <label className={styles.label}>
             <input className={styles.input} type='checkbox' />
             {manufacturer.name}
-            <span>({manufacturer.count / 2})</span>
+            <span>({manufacturer.count})</span>
           </label>
         ))}
       </div>
