@@ -15,11 +15,7 @@ interface InputProps {
 
 const Input: FC<InputProps> = ({ svg, placeholder, variant }) => {
   return (
-    <div
-      className={`${styles.input} ${
-        variant === InputVariant.white ? styles.input_white : ''
-      } ${variant === InputVariant.gray ? styles.input_gray : ''}`}
-    >
+    <div className={`${styles.input} ${variant === InputVariant.white ? styles.input_white : ''} ${variant === InputVariant.gray ? styles.input_gray : ''}`}>
       <input type='text' placeholder={placeholder} />
       {svg && <img src={svg} alt='input' />}
     </div>

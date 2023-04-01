@@ -27,13 +27,9 @@ export const productSlice = createSlice({
       } else if (action.payload === '0-1') {
         state.products = state.products.sort((a, b) => a.price - b.price)
       } else if (action.payload === 'a-z') {
-        state.products = state.products.sort((a: any, b: any) =>
-          a.title.localeCompare(b.title)
-        )
+        state.products = state.products.sort((a: any, b: any) => a.title.localeCompare(b.title))
       } else if (action.payload === 'z-a') {
-        state.products = state.products.sort((a: any, b: any) =>
-          b.title.localeCompare(a.title)
-        )
+        state.products = state.products.sort((a: any, b: any) => b.title.localeCompare(a.title))
       }
     },
     sortingType: (state, action: PayloadAction<string>) => {
@@ -42,16 +38,11 @@ export const productSlice = createSlice({
         return
       }
 
-      state.products = state.copyProducts.filter(e =>
-        e.specifications.type.find(e => e === action.payload)
-      )
+      state.products = state.copyProducts.filter(e => e.specifications.type.find(e => e === action.payload))
     }
   },
   extraReducers: {
-    [fetchProducts.fulfilled.type]: (
-      state,
-      action: PayloadAction<IProduc[]>
-    ) => {
+    [fetchProducts.fulfilled.type]: (state, action: PayloadAction<IProduc[]>) => {
       state.isLoading = false
       state.error = ''
       state.products = action.payload

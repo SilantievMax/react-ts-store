@@ -30,11 +30,7 @@ const Footer: FC = () => {
             <a className={styles.footer__link} href='#'>
               Подпишись на скидки и акции
             </a>
-            <Input
-              svg={arrowr}
-              variant={InputVariant.white}
-              placeholder='Введите ваш E-mail'
-            />
+            <Input svg={arrowr} variant={InputVariant.white} placeholder='Введите ваш E-mail' />
           </li>
 
           <li className='footer__item'>
@@ -67,18 +63,10 @@ const Footer: FC = () => {
             <p className={styles.footer__link_p}>Связь в мессенджерах:</p>
             <div className={styles.footer__wrapper_message}>
               <a href='#'>
-                <img
-                  className={styles.footer__img_link}
-                  src={whatsapp}
-                  alt='whatsapp'
-                />
+                <img className={styles.footer__img_link} src={whatsapp} alt='whatsapp' />
               </a>
               <a href='#'>
-                <img
-                  className={styles.footer__img_link}
-                  src={telegram}
-                  alt='telegram'
-                />
+                <img className={styles.footer__img_link} src={telegram} alt='telegram' />
               </a>
             </div>
           </li>
@@ -92,11 +80,7 @@ const Footer: FC = () => {
 
             <div className={styles.bloc_card}>
               <img className={styles.bloc_card_img} src={visa} alt='visa' />
-              <img
-                className={styles.bloc_card_img}
-                src={mastercard}
-                alt='mastercard'
-              />
+              <img className={styles.bloc_card_img} src={mastercard} alt='mastercard' />
             </div>
           </li>
         </ul>

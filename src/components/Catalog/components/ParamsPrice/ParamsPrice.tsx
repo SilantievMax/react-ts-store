@@ -26,19 +26,9 @@ const ParamsPrice: FC = () => {
         Цена <span>₸</span>
       </div>
       <div className={styles.inputs}>
-        <input
-          onChange={e => setMinPrice(+e.target.value)}
-          value={minPrice}
-          className={styles.input}
-          type='number'
-        />
+        <input onChange={e => setMinPrice(+e.target.value)} value={minPrice} className={styles.input} type='number' />
         -
-        <input
-          onChange={e => setMaxPrice(+e.target.value)}
-          value={maxPrice}
-          className={styles.input}
-          type='number'
-        />
+        <input onChange={e => setMaxPrice(+e.target.value)} value={maxPrice} className={styles.input} type='number' />
       </div>
     </div>
   )

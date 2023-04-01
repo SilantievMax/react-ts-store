@@ -14,11 +14,7 @@ const ParamsManufacturer: FC = () => {
     <div className={styles.continer}>
       <h4 className={styles.heading}>Производитель</h4>
       <div className={styles.input_block}>
-        <Input
-          variant={InputVariant.gray}
-          placeholder='Поиск...'
-          svg={search}
-        />
+        <Input variant={InputVariant.gray} placeholder='Поиск...' svg={search} />
       </div>
       <div className={styles.inputs}>
         {manufacturerProduct.map(manufacturer => (

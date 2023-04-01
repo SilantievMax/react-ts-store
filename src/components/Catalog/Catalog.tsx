@@ -9,11 +9,7 @@ import Loading from 'components/generic/Loading/Loading'
 
 import { fetchProducts } from 'utils/jsonGetProducts'
 
-import {
-  getManufacturer,
-  getTypeProduct,
-  grtPriceProduct
-} from 'store/reducers/SortingSlice'
+import { getManufacturer, getTypeProduct, grtPriceProduct } from 'store/reducers/SortingSlice'
 
 import styles from './Catalog.module.scss'
 

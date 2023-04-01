@@ -16,10 +16,7 @@ const ListTypeCare: FC<ListTypeCareProps> = ({ heading }) => {
     <div className={`${styles.type_care} ${heading && styles.inAside}`}>
       <h4 className={styles.heading}>{heading}</h4>
 
-      {typeProducts &&
-        typeProducts.map((product, index) => (
-          <TypeCare key={index} isAsideBloc={isAsideBloc} text={product} />
-        ))}
+      {typeProducts && typeProducts.map((product, index) => <TypeCare key={index} isAsideBloc={isAsideBloc} text={product} />)}
     </div>
   )
 }

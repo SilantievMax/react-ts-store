@@ -13,11 +13,7 @@ interface NavProps {
 
 const Nav: FC<NavProps> = ({ variant }) => {
   return (
-    <nav
-      className={`${variant === NavVariant.header ? styles.nav_header : ''} ${
-        variant === NavVariant.footer ? styles.nav_footer : ''
-      }`}
-    >
+    <nav className={`${variant === NavVariant.header ? styles.nav_header : ''} ${variant === NavVariant.footer ? styles.nav_footer : ''}`}>
       <a href='#' className={styles.link}>
         О компании
       </a>

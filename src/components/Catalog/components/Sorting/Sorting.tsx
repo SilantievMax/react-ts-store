@@ -23,11 +23,7 @@ const Sorting: FC<SortingProps> = ({ heading }) => {
       <h3 className={styles.heading}>{heading}</h3>
       <div className={styles.select_wrapper}>
         <span className={styles.sort}>Сортировка:</span>
-        <select
-          value={selectValue}
-          onChange={e => getValueSelect(e)}
-          className={styles.select}
-        >
+        <select value={selectValue} onChange={e => getValueSelect(e)} className={styles.select}>
           <option value='a-z'>По названию (а-я)</option>
           <option value='0-1'>По возрастанию цены</option>
           <option value='z-a'>По названию (я-а)</option>

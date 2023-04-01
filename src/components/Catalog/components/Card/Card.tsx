@@ -48,8 +48,7 @@ const Card: FC<CardProps> = ({ product }) => {
         </li>
       </ul>
       <div className={styles.card_price}>
-        <span>{product.price} ₸</span>{' '}
-        <ButtonCard text='В КОРЗИНУ' svg={basket} />
+        <span>{product.price} ₸</span> <ButtonCard text='В КОРЗИНУ' svg={basket} />
       </div>
     </div>
   )
