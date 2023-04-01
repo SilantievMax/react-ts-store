@@ -1,3 +1,4 @@
+import { useAppSelector } from 'hooks/redux'
 import React, { FC } from 'react'
 
 import Input, { InputVariant } from 'components/generic/Input/Input'
@@ -7,6 +8,8 @@ import search from 'assets/svg/search.svg'
 import styles from './ParamsManufacturer.module.scss'
 
 const ParamsManufacturer: FC = () => {
+  const { manufacturerProduct } = useAppSelector(state => state.sortingReduxer)
+
   return (
     <div className={styles.continer}>
       <h4 className={styles.heading}>Производитель</h4>
@@ -18,26 +21,13 @@ const ParamsManufacturer: FC = () => {
         />
       </div>
       <div className={styles.inputs}>
-        <label className={styles.label}>
-          <input className={styles.input} type='checkbox' />
-          Grifon
-          <span>(34)</span>
-        </label>
-        <label className={styles.label}>
-          <input className={styles.input} type='checkbox' />
-          Boyscout
-          <span>(34)</span>
-        </label>
-        <label className={styles.label}>
-          <input className={styles.input} type='checkbox' />
-          Paclan
-          <span>(34)</span>
-        </label>
-        <label className={styles.label}>
-          <input className={styles.input} type='checkbox' />
-          Булгари Грин
-          <span>(34)</span>
-        </label>
+        {manufacturerProduct.map(manufacturer => (
+          <label className={styles.label}>
+            <input className={styles.input} type='checkbox' />
+            {manufacturer.name}
+            <span>({manufacturer.count / 2})</span>
+          </label>
+        ))}
       </div>
     </div>
   )
