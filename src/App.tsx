@@ -16,7 +16,7 @@ const App: FC = () => {
       <Layout>
         <Routes>
           <Route path='/' element={<CardProducts />} />
-          <Route path='/product' element={<CardProduct />} />
+          <Route path='/product/:id' element={<CardProduct />} />
         </Routes>
       </Layout>
       <Footer />
