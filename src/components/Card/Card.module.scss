@@ -3,10 +3,13 @@
 .card {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  gap: 20px;
 }
 
 .img {
   margin: 0 auto;
+  max-width: 664px;
+  max-height: 471px;
 }
 
 .eee {

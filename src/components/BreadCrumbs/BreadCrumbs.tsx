@@ -1,13 +1,22 @@
-import React from 'react'
+import React, { FC } from 'react'
+import { Link } from 'react-router-dom'
 
 import styles from './BreadCrumbs.module.scss'
 
-const BreadCrumbs = () => {
+interface BreadCrumbsProps {
+  title: string
+}
+
+const BreadCrumbs: FC<BreadCrumbsProps> = ({ title }) => {
   return (
     <div className={styles.card}>
-      <span className={styles.text}>Главная</span>
-      <span className={styles.text}>Каталог</span>
-      <span className={styles.text}>Название товара</span>
+      <Link to='/' className={styles.text}>
+        Главная
+      </Link>
+      <Link to='/' className={styles.text}>
+        Каталог
+      </Link>
+      <span className={styles.text}>{title}</span>
     </div>
   )
 }

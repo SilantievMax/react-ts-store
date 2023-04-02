@@ -16,10 +16,6 @@ import styles from './Catalog.module.scss'
 const Catalog: FC = () => {
   const dispatch = useAppDispatch()
 
-  useEffect(() => {
-    dispatch(fetchProducts())
-  }, [])
-
   const { products, isLoading } = useAppSelector(state => state.productReduxer)
 
   useEffect(() => {

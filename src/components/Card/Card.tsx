@@ -1,4 +1,5 @@
-import React from 'react'
+import React, { FC } from 'react'
+import { IProduc } from 'types/types'
 
 import Button from 'components/generic/Button/Button'
 
@@ -9,39 +10,43 @@ import share from 'assets/svg/share.svg'
 
 import styles from './Card.module.scss'
 
-const weight = '90 г    '
+interface CardProps {
+  data: IProduc
+}
 
-const isWeight = weight[weight.length - 1] === 'л' ? ml : g
+const Card: FC<CardProps> = ({ data }) => {
+  // const weight = data.specifications.brand
 
-const Card = () => {
+  // const isWeight = weight[weight.length - 1] === 'л' ? ml : g
+
   return (
     <div className={styles.card}>
       <div>
-        <img className={styles.img} src='https://alania-market.ru/image/cache/catalog/stirka-i-uhod-za-belyem/stiralnye-poroshki/5/16328296-1-640x640.jpg' alt='' />
+        <img className={styles.img} src={data.url_img} alt='' />
       </div>
       <div>
         <div className={styles.eee}>В наличии</div>
-        <div className={styles.heading}>
-          <span>BioMio BIO-SOAP</span>
-          Экологичное туалетное мыло. Литсея и бергамот
-        </div>
+          <div className={styles.heading}>
+            {/* <span>{data?.specifications?.weight}</span> */}
+            {data.title}
+          </div>
         <div className={styles.weight}>
-          <div
+          {/* <div
             style={{
               backgroundImage: `url(${isWeight})`
             }}
             className={styles.weight_img}
-          ></div>
-          {weight}
+          ></div> */}
+          {/* {data.specifications.weight} */}
         </div>
         <div className={styles.count_price}>
-          <span className={styles.price}>53.67</span>
+          <span className={styles.price}>{data.price}</span>
           <div className={styles.btn_span}>
             <span>-</span> 1 <span>+</span>
           </div>
           <Button text='В корзину' svg={basket} />
         </div>
-        <div className={styles.diwload}>
+        {/* <div className={styles.diwload}>
           <div className={styles.share}>
             <img src={share} alt='' />
           </div>
@@ -50,51 +55,49 @@ const Card = () => {
             При покупке от 10 000 ₸ бесплатная <br /> доставка по Кокчетаву и области
           </div>
           <div className={styles.diwload_p}>Прайс-лист</div>
-        </div>
-        <ul className={styles.list1}>
+        </div> */}
+        {/* <ul className={styles.list1}>
           <li>
-            Производитель: <span>BioMio</span>
+            Производитель: <span>{data.specifications.manufacturer}</span>
           </li>
           <li>
-            Бренд: <span>BioMio</span>
+            Бренд: <span>{data.specifications.brand}</span>
           </li>
           <li>
             Артикул: <span>460404</span>
           </li>
           <li>
-            Штрихкод: <span>4604049097548</span>
+            Штрихкод: <span>{data.barcode}</span>
           </li>
-        </ul>
-        <div className={styles.description}>
+        </ul> */}
+        {/* <div className={styles.description}>
           <h5>Описание</h5>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam interdum ut justo, vestibulum sagittis iaculis iaculis. Quis mattis vulputate feugiat massa vestibulum
-            duis. Faucibus consectetur aliquet sed pellentesque consequat consectetur congue mauris venenatis. Nunc elit, dignissim sed nulla ullamcorper enim, malesuada.
+          <p> {data.description}
           </p>
-        </div>
+        </div> */}
         <div className={styles.list2_block}>
           <h5>Характеристики</h5>
-          <ul className={styles.list1}>
+          {/* <ul className={styles.list1}>
             <li>
               Назначение: <span>BioMio</span>
             </li>
             <li>
-              Тип: <span>BioMio</span>
+              Тип: <span>{data.specifications.type.join(', ')}</span>
             </li>
             <li>
-              Производитель: <span>460404</span>
+              Производитель: <span>{data.specifications.manufacturer}</span>
             </li>
             <li>
-              Бренд: <span>4604049097548</span>
+              Бренд: <span>{data.specifications.brand}</span>
             </li>
             <li>
               Артикул: <span>4604049097548</span>
             </li>
             <li>
-              Штрихкод: <span>4604049097548</span>
+              Штрихкод: <span>{data.barcode}</span>
             </li>
             <li>
-              Вес: <span>90 г</span>
+              Вес: <span>{weight}</span>
             </li>
             <li>
               Объем: <span>90 г</span>
@@ -102,8 +105,8 @@ const Card = () => {
             <li>
               Кол-во в коробке: <span>90 г</span>
             </li>
-          </ul>
-        </div>
+          </ul> */}
+        </div> 
       </div>
     </div>
   )

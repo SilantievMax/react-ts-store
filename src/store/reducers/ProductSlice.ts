@@ -1,10 +1,12 @@
 import { PayloadAction, createSlice } from '@reduxjs/toolkit'
+import { json } from 'stream/consumers'
 import { IProduc } from 'types/types'
 
 import { fetchProducts } from 'utils/jsonGetProducts'
 
 interface ProductState {
   products: IProduc[]
+  product: IProduc
   isLoading: boolean
   error: string
   copyProducts: IProduc[]
@@ -12,6 +14,7 @@ interface ProductState {
 
 const initialState: ProductState = {
   products: [],
+  product: {} as IProduc,
   isLoading: true,
   error: '',
   copyProducts: []
@@ -40,7 +43,17 @@ export const productSlice = createSlice({
 
       state.products = state.copyProducts.filter(e => e.specifications.type.find(e => e === action.payload))
     },
-    sortByParams: (state, action: PayloadAction<string>) => {}
+    sortByParams: (state, action: PayloadAction<string>) => {},
+    getProducOne: (state, action: PayloadAction<any>) => {
+      // state.product = {} as IProduc
+      console.log(state.products)
+      if (state.products.length > 0) {
+        const indexProduct = state.products.map(o => o.id).indexOf(+action.payload)
+        state.product = state.products[indexProduct]
+        console.log(+action.payload)
+        console.log('indexProduct', indexProduct)
+      }
+    }
   },
   extraReducers: {
     [fetchProducts.fulfilled.type]: (state, action: PayloadAction<IProduc[]>) => {
@@ -61,4 +74,4 @@ export const productSlice = createSlice({
 })
 
 export default productSlice.reducer
-export const { sortingPrice, sortingType } = productSlice.actions
+export const { sortingPrice, sortingType, getProducOne } = productSlice.actions

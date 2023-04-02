@@ -1,4 +1,5 @@
-import React, { FC } from 'react'
+import { useAppDispatch } from 'hooks/redux'
+import React, { FC, useEffect } from 'react'
 import { Route, Routes } from 'react-router-dom'
 
 import CardProduct from 'pages/CardProduct'
@@ -9,7 +10,14 @@ import Footer from 'components/Footer/Footer'
 import Header from 'components/Header/Header'
 import Layout from 'components/Layout/Layout'
 
+import { fetchProducts } from 'utils/jsonGetProducts'
+
 const App: FC = () => {
+  const dispatch = useAppDispatch()
+
+  useEffect(() => {
+    dispatch(fetchProducts())
+  }, [])
   return (
     <>
       <Header />
