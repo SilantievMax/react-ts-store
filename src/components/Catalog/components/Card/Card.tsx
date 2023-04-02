@@ -19,7 +19,10 @@ const Card: FC<CardProps> = ({ product }) => {
 
   return (
     <div className={styles.card}>
+      <div className={styles.img_card}>
+
       <img className={styles.img} src={product.url_img} alt={product.title} />
+      </div>
       <div className={styles.block_weight}>
         <div
           style={{
