@@ -1,4 +1,5 @@
 import React, { FC } from 'react'
+import { Link } from 'react-router-dom'
 import { IProduc } from 'types/types'
 
 import ButtonCard from 'components/generic/ButtonCard/ButtonCard'
@@ -20,8 +21,7 @@ const Card: FC<CardProps> = ({ product }) => {
   return (
     <div className={styles.card}>
       <div className={styles.img_card}>
-
-      <img className={styles.img} src={product.url_img} alt={product.title} />
+        <img className={styles.img} src={product.url_img} alt={product.title} />
       </div>
       <div className={styles.block_weight}>
         <div
@@ -32,10 +32,10 @@ const Card: FC<CardProps> = ({ product }) => {
         ></div>
         <span className={styles.weight}>{weight}</span>
       </div>
-      <h4 className={styles.heading}>
+      <Link to={'product/' + product.id} className={styles.heading}>
         <span>{product.specifications.brand} </span>
         {product.title}
-      </h4>
+      </Link>
       <ul className={styles.list}>
         <li className={styles.item}>
           Штрихкод:
