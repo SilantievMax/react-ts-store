@@ -1,0 +1,24 @@
+@import 'vars';
+
+.card {
+  margin-top: 45px;
+  margin-bottom: 45px;
+}
+
+.text {
+  font-family: $font300;
+  font-size: 14px;
+  line-height: 120%;
+  color: #3f4e65;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-right: 1px dashed #3f4e65;
+
+  &:first-child {
+    padding-left: 0;
+  }
+
+  &:last-child {
+    border-right: none;
+  }
+}

@@ -26,7 +26,7 @@
       "weight": "15X28.8 г",
       "manufacturer": "ARIEL",
       "size": "",
-      "type": ["средства для посуды"]
+      "type": ["средства для стирки"]
     }
   },
   {
@@ -35,7 +35,7 @@
     "url_img": "https://alania-market.ru/image/cache/catalog/stirka-i-uhod-za-belyem/stiralnye-poroshki/5/16328296-1-640x640.jpg",
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam interdum ut justo, vestibulum sagittis iaculis iaculis. Quis mattis vulputate feugiat massa vestibulum duis. Faucibus consectetur aliquet sed pellentesque consequat consectetur congue mauris venenatis. Nunc elit, dignissim sed nulla ullamcorper enim, malesuada.",
     "barcode": "4604049097345",
-    "price": 53.99,
+    "price": 53.98,
     "specifications": {
       "brand": "BIMAX",
       "weight": "1500 г",
@@ -56,11 +56,52 @@
       "weight": "200 мл",
       "manufacturer": "Head & Shoulders",
       "size": "",
-      "type": [
-        "уход за волосами",
-        "подарочные наборы",
-        "гигиеническая продукция"
-      ]
+      "type": ["уход за волосами", "подарочные наборы", "гигиеническая продукция"]
+    }
+  },
+  {
+    "id": 5,
+    "title": "Порошок стиральный Автомат 100 пятен COMPACT",
+    "url_img": "https://alania-market.ru/image/cache/catalog/stirka-i-uhod-za-belyem/stiralnye-poroshki/5/16328296-1-640x640.jpg",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam interdum ut justo, vestibulum sagittis iaculis iaculis. Quis mattis vulputate feugiat massa vestibulum duis. Faucibus consectetur aliquet sed pellentesque consequat consectetur congue mauris venenatis. Nunc elit, dignissim sed nulla ullamcorper enim, malesuada.",
+    "barcode": "4604049097345",
+    "price": 53.99,
+    "specifications": {
+      "brand": "BIMAX",
+      "weight": "1500 г",
+      "manufacturer": "BIMAX",
+      "size": "",
+      "type": ["средства для стирки", "гигиеническая продукция"]
+    }
+  },
+  {
+    "id": 6,
+    "title": "Порошок стиральный Автомат 100 пятен COMPACT",
+    "url_img": "https://alania-market.ru/image/cache/catalog/stirka-i-uhod-za-belyem/stiralnye-poroshki/5/16328296-1-640x640.jpg",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam interdum ut justo, vestibulum sagittis iaculis iaculis. Quis mattis vulputate feugiat massa vestibulum duis. Faucibus consectetur aliquet sed pellentesque consequat consectetur congue mauris venenatis. Nunc elit, dignissim sed nulla ullamcorper enim, malesuada.",
+    "barcode": "4604049097345",
+    "price": 53.99,
+    "specifications": {
+      "brand": "BIMAX",
+      "weight": "1500 г",
+      "manufacturer": "BIMAX",
+      "size": "",
+      "type": ["средства для стирки", "гигиеническая продукция"]
+    }
+  },
+  {
+    "id": 7,
+    "title": "Порошок стиральный Автомат 100 пятен COMPACT",
+    "url_img": "https://alania-market.ru/image/cache/catalog/stirka-i-uhod-za-belyem/stiralnye-poroshki/5/16328296-1-640x640.jpg",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam interdum ut justo, vestibulum sagittis iaculis iaculis. Quis mattis vulputate feugiat massa vestibulum duis. Faucibus consectetur aliquet sed pellentesque consequat consectetur congue mauris venenatis. Nunc elit, dignissim sed nulla ullamcorper enim, malesuada.",
+    "barcode": "4604049097345",
+    "price": 53.99,
+    "specifications": {
+      "brand": "BIMAX",
+      "weight": "1500 г",
+      "manufacturer": "BIMAX",
+      "size": "",
+      "type": ["средства для стирки", "гигиеническая продукция"]
     }
   }
 ]

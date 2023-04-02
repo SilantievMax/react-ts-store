@@ -1,4 +1,8 @@
 import React, { FC } from 'react'
+import { Route, Routes } from 'react-router-dom'
+
+import CardProduct from 'pages/CardProduct'
+import CardProducts from 'pages/CardProducts'
 
 import Catalog from 'components/Catalog/Catalog'
 import Footer from 'components/Footer/Footer'
@@ -10,7 +14,10 @@ const App: FC = () => {
     <>
       <Header />
       <Layout>
-        <Catalog />
+        <Routes>
+          <Route path='/' element={<CardProducts />} />
+          <Route path='/product' element={<CardProduct />} />
+        </Routes>
       </Layout>
       <Footer />
     </>
