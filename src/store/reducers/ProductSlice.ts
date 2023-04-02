@@ -39,7 +39,8 @@ export const productSlice = createSlice({
       }
 
       state.products = state.copyProducts.filter(e => e.specifications.type.find(e => e === action.payload))
-    }
+    },
+    sortByParams: (state, action: PayloadAction<string>) => {}
   },
   extraReducers: {
     [fetchProducts.fulfilled.type]: (state, action: PayloadAction<IProduc[]>) => {
