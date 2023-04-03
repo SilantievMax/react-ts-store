@@ -1,8 +1,11 @@
+import { useAppDispatch } from 'hooks/redux'
 import React, { FC } from 'react'
 import { Link } from 'react-router-dom'
 import { IProduc } from 'types/types'
 
 import ButtonCard from 'components/generic/ButtonCard/ButtonCard'
+
+import { getProductInBasket } from 'store/reducers/BasketSlice'
 
 import basket from 'assets/svg/basket-w.svg'
 import g from 'assets/svg/g.svg'
@@ -17,6 +20,7 @@ interface CardProps {
 const Card: FC<CardProps> = ({ product }) => {
   const weight = product.specifications.weight
   const isWeight = weight[weight.length - 1] === 'л' ? ml : g
+  const dispatch = useAppDispatch()
 
   return (
     <div className={styles.card}>
@@ -51,7 +55,7 @@ const Card: FC<CardProps> = ({ product }) => {
         </li>
       </ul>
       <div className={styles.card_price}>
-        <span>{product.price} ₸</span> <ButtonCard text='В КОРЗИНУ' svg={basket} />
+        <span>{product.price} ₸</span> <ButtonCard onClick={() => dispatch(getProductInBasket(product.barcode))} text='В КОРЗИНУ' svg={basket} />
       </div>
     </div>
   )

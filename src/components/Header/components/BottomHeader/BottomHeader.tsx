@@ -1,3 +1,4 @@
+import { useAppSelector } from 'hooks/redux'
 import React, { FC } from 'react'
 
 import Button from 'components/generic/Button/Button'
@@ -13,11 +14,13 @@ import search from 'assets/svg/search.svg'
 import styles from './BottomHeader.module.scss'
 
 const Basket: FC = () => {
+  const { basket } = useAppSelector(state => state.basketReduxer)
+
   return (
     <div className={styles.basker}>
       <div className={styles.basker_top}>
         <img src={basker} alt='basker' />
-        <span className={styles.basker_notifications}>3</span>
+        <span className={styles.basker_notifications}>{basket.length}</span>
       </div>
       <div className={styles.basker_bottom}>
         <span className={styles.basker_text}>Корзина</span>

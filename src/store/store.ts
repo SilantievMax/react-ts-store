@@ -1,11 +1,13 @@
 import { combineReducers, configureStore } from '@reduxjs/toolkit'
 
+import basketReduxer from 'store/reducers/BasketSlice'
 import productReduxer from 'store/reducers/ProductSlice'
 import sortingReduxer from 'store/reducers/SortingSlice'
 
 const rootReducer = combineReducers({
   productReduxer,
-  sortingReduxer
+  sortingReduxer,
+  basketReduxer
 })
 
 export const setupStore = () => {
