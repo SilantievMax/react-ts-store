@@ -45,13 +45,9 @@ export const productSlice = createSlice({
     },
     sortByParams: (state, action: PayloadAction<string>) => {},
     getProducOne: (state, action: PayloadAction<any>) => {
-      // state.product = {} as IProduc
-      console.log(state.products)
       if (state.products.length > 0) {
         const indexProduct = state.products.map(o => o.id).indexOf(+action.payload)
         state.product = state.products[indexProduct]
-        console.log(+action.payload)
-        console.log('indexProduct', indexProduct)
       }
     }
   },
@@ -69,7 +65,7 @@ export const productSlice = createSlice({
     [fetchProducts.rejected.type]: (state, action: PayloadAction<string>) => {
       state.isLoading = false
       state.error = action.payload
-    }
+    },
   }
 })
 

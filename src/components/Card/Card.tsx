@@ -18,16 +18,15 @@ const Card: FC<CardProps> = ({ data }) => {
   // const weight = data.specifications.brand
 
   // const isWeight = weight[weight.length - 1] === 'л' ? ml : g
-
   return (
     <div className={styles.card}>
-      <div>
+      <div className={styles.img_card}>
         <img className={styles.img} src={data.url_img} alt='' />
       </div>
       <div>
         <div className={styles.eee}>В наличии</div>
           <div className={styles.heading}>
-            {/* <span>{data?.specifications?.weight}</span> */}
+            {/* <span>{data.specifications.weight}</span> */}
             {data.title}
           </div>
         <div className={styles.weight}>
@@ -46,7 +45,7 @@ const Card: FC<CardProps> = ({ data }) => {
           </div>
           <Button text='В корзину' svg={basket} />
         </div>
-        {/* <div className={styles.diwload}>
+        <div className={styles.diwload}>
           <div className={styles.share}>
             <img src={share} alt='' />
           </div>
@@ -55,13 +54,13 @@ const Card: FC<CardProps> = ({ data }) => {
             При покупке от 10 000 ₸ бесплатная <br /> доставка по Кокчетаву и области
           </div>
           <div className={styles.diwload_p}>Прайс-лист</div>
-        </div> */}
-        {/* <ul className={styles.list1}>
+        </div>
+        <ul className={styles.list1}>
           <li>
-            Производитель: <span>{data.specifications.manufacturer}</span>
+            {/* Производитель: <span>{data.specifications.manufacturer}</span> */}
           </li>
           <li>
-            Бренд: <span>{data.specifications.brand}</span>
+            {/* Бренд: <span>{data.specifications.brand}</span> */}
           </li>
           <li>
             Артикул: <span>460404</span>
@@ -69,12 +68,12 @@ const Card: FC<CardProps> = ({ data }) => {
           <li>
             Штрихкод: <span>{data.barcode}</span>
           </li>
-        </ul> */}
-        {/* <div className={styles.description}>
+        </ul>
+        <div className={styles.description}>
           <h5>Описание</h5>
           <p> {data.description}
           </p>
-        </div> */}
+        </div>
         <div className={styles.list2_block}>
           <h5>Характеристики</h5>
           {/* <ul className={styles.list1}>

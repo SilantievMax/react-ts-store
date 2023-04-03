@@ -11,10 +11,11 @@ const CardProduct: FC = () => {
   const dispatch = useAppDispatch()
   const { id } = useParams()
 
+  const { product } = useAppSelector(state => state.productReduxer)
+
   useEffect(() => {
     dispatch(getProducOne(id))
-  }, [id])
-  const { product } = useAppSelector(state => state.productReduxer)
+  }, [])
 
   return (
     <div>
