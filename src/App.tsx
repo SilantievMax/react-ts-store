@@ -3,7 +3,7 @@ import React, { FC, useEffect } from 'react'
 import { Route, Routes } from 'react-router-dom'
 
 import CardProduct from 'pages/CardProduct'
-import CardProducts from 'pages/CardProducts'
+import CatalogProducts from 'pages/CatalogProducts'
 
 import Catalog from 'components/Catalog/Catalog'
 import Footer from 'components/Footer/Footer'
@@ -18,12 +18,13 @@ const App: FC = () => {
   useEffect(() => {
     dispatch(fetchProducts())
   }, [])
+  
   return (
     <>
       <Header />
       <Layout>
         <Routes>
-          <Route path='/' element={<CardProducts />} />
+          <Route path='/' element={<CatalogProducts />} />
           <Route path='/product/:id' element={<CardProduct />} />
         </Routes>
       </Layout>

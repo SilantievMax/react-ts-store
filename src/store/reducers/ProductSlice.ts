@@ -14,10 +14,10 @@ interface ProductState {
 
 const initialState: ProductState = {
   products: [],
+  copyProducts: [],
   product: {} as IProduc,
   isLoading: true,
-  error: '',
-  copyProducts: []
+  error: ''
 }
 
 export const productSlice = createSlice({

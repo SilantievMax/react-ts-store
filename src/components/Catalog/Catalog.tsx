@@ -4,10 +4,8 @@ import React, { FC, useEffect } from 'react'
 import AsideParameters from 'components/Catalog/AsideParameters/AsideParameters'
 import Cards from 'components/Catalog/Cards/Cards'
 import ListTypeCare from 'components/Catalog/components/ListTypeCare/ListTypeCare'
-import Sorting from 'components/Catalog/components/Sorting/Sorting'
-import Loading from 'components/generic/Loading/Loading'
 
-import { fetchProducts } from 'utils/jsonGetProducts'
+import Loading from 'components/generic/Loading/Loading'
 
 import { getManufacturer, getTypeProduct, grtPriceProduct } from 'store/reducers/SortingSlice'
 
@@ -26,7 +24,6 @@ const Catalog: FC = () => {
 
   return (
     <div className={styles.sorting}>
-      <Sorting heading='Косметика и гигиена' />
       <ListTypeCare />
       <div className={styles.section}>
         <AsideParameters />
