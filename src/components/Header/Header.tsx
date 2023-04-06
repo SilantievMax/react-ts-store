@@ -10,7 +10,7 @@ interface HeaderProps {}
 
 const Header: FC<HeaderProps> = () => {
   return (
-    <header>
+    <header className={styles.header}>
       <Layout>
         <TopHeader />
       </Layout>
