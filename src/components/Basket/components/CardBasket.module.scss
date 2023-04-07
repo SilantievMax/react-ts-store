@@ -1,0 +1,58 @@
+@import 'vars';
+
+.card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border-top: 1px dashed #3f4e653c;
+  border-bottom: 1px dashed #3f4e653c;
+
+  &:first-child {
+    margin-top: 50px;
+  }
+
+  &:last-child {
+    margin-bottom: 30px;
+  }
+}
+
+.img {
+  max-width: 281px;
+  max-height: 191px;
+}
+
+.list {
+  max-width: 480px;
+}
+
+.item1 {
+  font-family: $font400;
+  font-size: 12px;
+  line-height: 130%;
+  color: #3f4e65;
+}
+
+.item2 {
+  font-family: $font700;
+  font-size: 30px;
+  line-height: 36px;
+  color: #111111;
+  margin-top: 9px;
+}
+
+.item3 {
+  font-family: $font300;
+  font-size: 12px;
+  line-height: 150%;
+  color: #3f4e65;
+  margin-top: 10px;
+}
+
+.price {
+  font-family: $font700;
+  font-size: 30px;
+  line-height: 130%;
+  color: #111111;
+}

@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 import styles from './BreadCrumbs.module.scss'
 
 interface BreadCrumbsProps {
-  title: string
+  title?: string
 }
 
 const BreadCrumbs: FC<BreadCrumbsProps> = ({ title }) => {

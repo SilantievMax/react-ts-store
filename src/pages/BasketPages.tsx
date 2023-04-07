@@ -1,9 +1,13 @@
-import { useAppSelector } from 'hooks/redux'
 import React, { FC } from 'react'
 
+import Basket from 'components/Basket/Basket'
+
 const BasketPages: FC = () => {
-  const { basket } = useAppSelector(state => state.basketReduxer)
-  return <div>{basket}</div>
+  return (
+    <>
+      <Basket />
+    </>
+  )
 }
 
 export default BasketPages
