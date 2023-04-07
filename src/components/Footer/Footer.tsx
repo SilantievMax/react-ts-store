@@ -1,8 +1,8 @@
 import React, { FC } from 'react'
 
-import Layout from 'components/Layout/Layout'
 import Button from 'components/generic/Button/Button'
 import Input, { InputVariant } from 'components/generic/Input/Input'
+import Layout from 'components/generic/Layout/Layout'
 import Logo from 'components/generic/Logo/Logo'
 import Nav, { NavVariant } from 'components/generic/Nav/Nav'
 import Operator from 'components/generic/Operator/Operator'

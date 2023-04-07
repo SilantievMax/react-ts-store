@@ -3,11 +3,11 @@ import React, { FC, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
 
 import BreadCrumbs from 'components/BreadCrumbs/BreadCrumbs'
-import Card from 'components/Card/Card'
+import CardOneProduct from 'components/CardOneProduct/CardOneProduct'
 
 import { getProducOne } from 'store/reducers/ProductSlice'
 
-const CardProduct: FC = () => {
+const CardProductPages: FC = () => {
   const dispatch = useAppDispatch()
   const { id } = useParams()
 
@@ -20,9 +20,9 @@ const CardProduct: FC = () => {
   return (
     <div>
       <BreadCrumbs title={product?.title} />
-      <Card data={product} />
+      <CardOneProduct data={product} />
     </div>
   )
 }
 
-export default CardProduct
+export default CardProductPages

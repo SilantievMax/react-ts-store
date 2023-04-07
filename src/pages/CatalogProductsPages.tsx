@@ -3,7 +3,7 @@ import React from 'react'
 import Catalog from 'components/Catalog/Catalog'
 import Sorting from 'components/Sorting/Sorting'
 
-const CatalogProducts = () => {
+const CatalogProductsPages = () => {
   return (
     <>
       <Sorting heading='Косметика и гигиена' />
@@ -12,4 +12,4 @@ const CatalogProducts = () => {
   )
 }
 
-export default CatalogProducts
+export default CatalogProductsPages

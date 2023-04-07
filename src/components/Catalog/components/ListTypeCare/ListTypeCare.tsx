@@ -2,7 +2,7 @@ import { useAppSelector } from 'hooks/redux'
 import React, { FC } from 'react'
 
 import styles from './ListTypeCare.module.scss'
-import TypeCare from './TypeCare/TypeCare'
+import TypeCare from '../TypeCare/TypeCare'
 
 interface ListTypeCareProps {
   heading?: string

@@ -2,7 +2,7 @@ import React, { FC } from 'react'
 
 import BottomHeader from 'components/Header/components/BottomHeader/BottomHeader'
 import TopHeader from 'components/Header/components/TopHeader/TopHeader'
-import Layout from 'components/Layout/Layout'
+import Layout from 'components/generic/Layout/Layout'
 
 import styles from './Header.module.scss'
 

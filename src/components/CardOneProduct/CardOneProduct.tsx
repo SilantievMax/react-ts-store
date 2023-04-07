@@ -1,20 +1,24 @@
+import { useAppDispatch } from 'hooks/redux'
 import React, { FC } from 'react'
 import { IProduc } from 'types/types'
 
 import Button from 'components/generic/Button/Button'
+
+import { getProductInBasket } from 'store/reducers/BasketSlice'
 
 import basket from 'assets/svg/basket-w.svg'
 import g from 'assets/svg/g.svg'
 import ml from 'assets/svg/ml.svg'
 import share from 'assets/svg/share.svg'
 
-import styles from './Card.module.scss'
+import styles from './CardOneProduct.module.scss'
 
-interface CardProps {
+interface CardOneProductProps {
   data: IProduc
 }
 
-const Card: FC<CardProps> = ({ data }) => {
+const CardOneProduct: FC<CardOneProductProps> = ({ data }) => {
+  const dispatch = useAppDispatch()
   // const weight = data.specifications.brand
 
   // const isWeight = weight[weight.length - 1] === 'л' ? ml : g
@@ -25,10 +29,10 @@ const Card: FC<CardProps> = ({ data }) => {
       </div>
       <div>
         <div className={styles.eee}>В наличии</div>
-          <div className={styles.heading}>
-            {/* <span>{data.specifications.weight}</span> */}
-            {data.title}
-          </div>
+        <div className={styles.heading}>
+          {/* <span>{data.specifications.weight}</span> */}
+          {data.title}
+        </div>
         <div className={styles.weight}>
           {/* <div
             style={{
@@ -43,7 +47,7 @@ const Card: FC<CardProps> = ({ data }) => {
           <div className={styles.btn_span}>
             <span>-</span> 1 <span>+</span>
           </div>
-          <Button text='В корзину' svg={basket} />
+          <Button onClick={() => dispatch(getProductInBasket(data.barcode))} text='В корзину' svg={basket} />
         </div>
         <div className={styles.diwload}>
           <div className={styles.share}>
@@ -56,12 +60,8 @@ const Card: FC<CardProps> = ({ data }) => {
           <div className={styles.diwload_p}>Прайс-лист</div>
         </div>
         <ul className={styles.list1}>
-          <li>
-            {/* Производитель: <span>{data.specifications.manufacturer}</span> */}
-          </li>
-          <li>
-            {/* Бренд: <span>{data.specifications.brand}</span> */}
-          </li>
+          <li>{/* Производитель: <span>{data.specifications.manufacturer}</span> */}</li>
+          <li>{/* Бренд: <span>{data.specifications.brand}</span> */}</li>
           <li>
             Артикул: <span>460404</span>
           </li>
@@ -71,8 +71,7 @@ const Card: FC<CardProps> = ({ data }) => {
         </ul>
         <div className={styles.description}>
           <h5>Описание</h5>
-          <p> {data.description}
-          </p>
+          <p> {data.description}</p>
         </div>
         <div className={styles.list2_block}>
           <h5>Характеристики</h5>
@@ -105,10 +104,10 @@ const Card: FC<CardProps> = ({ data }) => {
               Кол-во в коробке: <span>90 г</span>
             </li>
           </ul> */}
-        </div> 
+        </div>
       </div>
     </div>
   )
 }
 
-export default Card
+export default CardOneProduct

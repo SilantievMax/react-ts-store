@@ -1,10 +1,9 @@
 import { useAppDispatch, useAppSelector } from 'hooks/redux'
 import React, { FC, useEffect } from 'react'
 
-import AsideParameters from 'components/Catalog/AsideParameters/AsideParameters'
+import AsideParameters from 'components/AsideParameters/AsideParameters'
 import Cards from 'components/Catalog/Cards/Cards'
 import ListTypeCare from 'components/Catalog/components/ListTypeCare/ListTypeCare'
-
 import Loading from 'components/generic/Loading/Loading'
 
 import { getManufacturer, getTypeProduct, grtPriceProduct } from 'store/reducers/SortingSlice'

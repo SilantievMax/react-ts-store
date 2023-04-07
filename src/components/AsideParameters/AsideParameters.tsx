@@ -1,12 +1,12 @@
 import React, { FC, useState } from 'react'
 
-import ParamsManufacturer from 'components/Catalog/components/ParamsManufacturer/ParamsManufacturer'
-import ParamsPrice from 'components/Catalog/components/ParamsPrice/ParamsPrice'
+import ParamsManufacturer from 'components/AsideParameters/components/ParamsManufacturer/ParamsManufacturer'
+import ParamsPrice from 'components/AsideParameters/components/ParamsPrice/ParamsPrice'
 import Button from 'components/generic/Button/Button'
 
 import deleteSvg from 'assets/svg/delete.svg'
 
-import ListTypeCare from '../components/ListTypeCare/ListTypeCare'
+import ListTypeCare from '../Catalog/components/ListTypeCare/ListTypeCare'
 
 import styles from './AsideParameters.module.scss'
 

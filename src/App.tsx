@@ -2,13 +2,13 @@ import { useAppDispatch } from 'hooks/redux'
 import React, { FC, useEffect } from 'react'
 import { Route, Routes } from 'react-router-dom'
 
-import CardProduct from 'pages/CardProduct'
-import CatalogProducts from 'pages/CatalogProducts'
+import BasketPages from 'pages/BasketPages'
+import CardProductPages from 'pages/CardProductPages'
+import CatalogProductsPages from 'pages/CatalogProductsPages'
 
-import Catalog from 'components/Catalog/Catalog'
 import Footer from 'components/Footer/Footer'
 import Header from 'components/Header/Header'
-import Layout from 'components/Layout/Layout'
+import Layout from 'components/generic/Layout/Layout'
 
 import { fetchProducts } from 'utils/jsonGetProducts'
 
@@ -18,14 +18,15 @@ const App: FC = () => {
   useEffect(() => {
     dispatch(fetchProducts())
   }, [])
-  
+
   return (
     <>
       <Header />
       <Layout>
         <Routes>
-          <Route path='/' element={<CatalogProducts />} />
-          <Route path='/product/:id' element={<CardProduct />} />
+          <Route path='/' element={<CatalogProductsPages />} />
+          <Route path='/product/:id' element={<CardProductPages />} />
+          <Route path='/basket' element={<BasketPages />} />
         </Routes>
       </Layout>
       <Footer />
