@@ -14,16 +14,16 @@ interface NavProps {
 const Nav: FC<NavProps> = ({ variant }) => {
   return (
     <nav className={`${variant === NavVariant.header ? styles.nav_header : ''} ${variant === NavVariant.footer ? styles.nav_footer : ''}`}>
-      <a href='#' className={styles.link}>
+      <a role='nav' href='#' className={styles.link}>
         О компании
       </a>
-      <a href='#' className={styles.link}>
+      <a role='nav' href='#' className={styles.link}>
         Доставка и оплата
       </a>
-      <a href='#' className={styles.link}>
+      <a role='nav' href='#' className={styles.link}>
         Возврат
       </a>
-      <a href='#' className={styles.link}>
+      <a role='nav' href='#' className={styles.link}>
         Контакты
       </a>
     </nav>

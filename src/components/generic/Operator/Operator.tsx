@@ -12,11 +12,11 @@ const Operator: FC<OperatorProps> = ({ footer }) => {
   return (
     <div className={styles.card}>
       <div className={styles.card_operator}>
-        <a className={`${styles.card_tel} ${footer && styles.card_f}`} href='tel:+77774900091'>
+        <a role="phone" className={`${styles.card_tel} ${footer && styles.card_f}`} href='tel:+77774900091'>
           +7 (777) 490-00-91
         </a>
-        <span className={`${styles.card_time} ${footer && styles.card_f}`}>время работы: 9:00-20:00</span>
-        <a className={`${styles.card_link} ${footer && styles.card_f}`} href='#'>
+        <span role="time"  className={`${styles.card_time} ${footer && styles.card_f}`}>время работы: 9:00-20:00</span>
+        <a role='operator' className={`${styles.card_link} ${footer && styles.card_f}`} href='#'>
           Заказать звонок
         </a>
       </div>
