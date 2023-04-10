@@ -18,7 +18,7 @@ const CardProductPages: FC = () => {
   }, [])
 
   return (
-    <div>
+    <div data-testid="CardProductPages">
       <BreadCrumbs title={product?.title} />
       <CardOneProduct data={product} />
     </div>
